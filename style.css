@@ -32,6 +32,9 @@
     width: 80%;
     top: 0;
     z-index: 3;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .item .refri {
@@ -67,4 +70,19 @@
 
 #next {
     right: 50px;
+}
+
+@keyframes toActive {
+    from {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+.item.active img.fruit {
+    animation: toActive 0.5s ease-in-out 1;
+}
+
+.item.active .title {
+    animation: toActive 0.5s ease-in-out 1;
 }
